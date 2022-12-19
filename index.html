@@ -48,144 +48,320 @@
         border-radius: 2vw;
         box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
       }
-      
-      
-      
-      span img {
+      .tablink {
+        background-color: rgb(136, 132, 132);
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 2vh;
+        font-weight: 600;
+        width: 20%;
+        height: 9vh;
+      }
+      .tablink:hover {
+        background-color: #777;
+      }
+      .tabcontent {
+        display: none;
+        height: 100%;
+      }
+      .beef span img, .chicken span img, .seafood span img {
         width: 50px;
         height: 50px;
-        list-style-type: none;
-        
       }
-      span img:hover {
+      .beef span img:hover, .chicken span img:hover, .seafood span img:hover {
         transform: scale(2.5);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
-      
-span {
-    margin-left: 12px;
-    font-size: 2vh;
-}
+      .beef span, .chicken span, .seafood span {
+        margin-left: 2px;
+        font-size: 15px;
+        padding: 10px;
+      }
+      #mdfont {
+        font-size: 11px;
+      }
+      #smfont {
+        font-size: 12px;
+        display: flex;
+      }
+      #smfontadjust {
+        font-size: 9px;
+        display: flex;
+      }
+      #maincourserow {
+        height: 25vh;
+      }
+      #smimg {
+        margin-left: 14px;
+      }
+      #maincourseheader {
+        background-color: rgba(241, 111, 35);
+        text-align: center;
+        padding-top: 1vh;
+        font-weight: 600;
+        color: white;
+      }
+      @media (max-width: 1200px) {
+        #largemaincourse {
+        display: none;
+        }
+      }
+      @media (max-width: 767px) {
+        #mdmaincourse {
+        display: none;
+        }
+      }
+      @media (min-width: 1199px) {
+        #mdmaincourse {
+        display: none;
+        }
+      }
+      @media (max-width: 280px) {
+        #smmaincourse {
+          display:none;
+        }
+      }
+      @media (min-width: 766px) {
+        #smmaincourse {
+          display:none;
+        }
+      }
 </style>
 <body>
+  <button class="tablink" onclick="openPage('maincoursetab', this, 'rgba(241, 111, 35)')" id="defaultOpen">Main Course</button>
+  <button class="tablink" onclick="openPage('pastaorvegetable', this, 'rgba(241, 111, 35)')">Pasta or Vegetable</button>
+  <button class="tablink" onclick="openPage('salad', this, 'rgba(241, 111, 35)')">Salad</button>
+  <button class="tablink" onclick="openPage('dessert', this, 'rgba(241, 111, 35)')">Dessert</button>
+  <button class="tablink" onclick="openPage('beverage', this, 'rgba(241, 111, 35)')">Beverage</button>
   
-    
-    
-    <div class="container"style="padding-left: 5vw; padding-right: 5vw;">
-        
-        <div class="row" style="">
-            
-            <div class="col border border-dark">
-                <div class="row" style="text-align: center;"><p>BEEF</p><br>
-                </div>
-                    <div class="row" style="">
-                        
-                        <div class="col" style="margin-left: 1vw;">
-                            
-                                <span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span>Beef with Brocolli</span></span><br><br>
-                                
-                                
-                                <span><img src="beefstroganoff img.jpg" alt="beefbrocolli"><span>Beef Stroganoff</span></span><br><br>
-                                
-
-                                <span><img src="braisedbeef img.jpg" alt="braisedbeef"><span>Braised Beef Short Plate</span></span><br><br>
-                                <span><img src="beefpotroast img.jpg" alt="beefpotroast"><span>Beef Pot Roast</span></span><br><br>
-                                <span><img src="" alt=""><span>Callos (**with Pork)</span></span><br><br>
-                                <span><img src="" alt=""><span>Roast Beef Brisket with Mushroom Gravy</span></span><br><br>
-                                <span><img src="" alt=""><span>Kare Kare</span></span><br><br>
-                                <span><img src="" alt=""><span>Lengua in Mushroom Sauce</span></span><br><br>
-                                <span><img src="" alt=""><span>Beef Fritos with Teriyaki Sauce</span></span><br><br>
-                                <span><img src="" alt=""><span>Mongolian Beef</span></span><br><br>
-                                  </div>
-                        </div>
-                    </div>
-            
-                  <!---SECOND COLUMN-->  
-                  <div class="col border border-dark">
-                    <div class="row" style="text-align: center;"><p>CHICKEN</p><br>
-                    </div>
-                        <div class="row" style="">
-                            
-                            <div class="col" style="margin-left: 1vw;">
-                                
-                                    <span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span>Beef with Brocolli</span></span><br><br>
-                                    
-                                    
-                                    <span><img src="beefstroganoff img.jpg" alt="beefbrocolli"><span>Beef Stroganoff</span></span><br><br>
-                                    
-    
-                                    <span><img src="braisedbeef img.jpg" alt="braisedbeef"><span>Braised Beef Short Plate</span></span><br><br>
-                                    <span><img src="beefpotroast img.jpg" alt="beefpotroast"><span>Beef Pot Roast</span></span><br><br>
-                                    <span><img src="" alt=""><span>Callos (**with Pork)</span></span><br><br>
-                                    <span><img src="" alt=""><span>Roast Beef Brisket with Mushroom Gravy</span></span><br><br>
-                                    <span><img src="" alt=""><span>Kare Kare</span></span><br><br>
-                                    <span><img src="" alt=""><span>Lengua in Mushroom Sauce</span></span><br><br>
-                                    <span><img src="" alt=""><span>Beef Fritos with Teriyaki Sauce</span></span><br><br>
-                                    <span><img src="" alt=""><span>Mongolian Beef</span></span><br><br>
-                                      </div>
-                            </div>
-                        </div>
-    <!---THIRD COLUMN-->
-    <div class="col border border-dark">
-        <div class="row" style="text-align: center;"><p>SEAFOOD</p><br>
-        </div>
-            <div class="row" style="">
-                
-                <div class="col" style="margin-left: 1vw;">
-                    
-                        <span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span>Beef with Brocolli</span></span><br><br>
-                        
-                        
-                        <span><img src="beefstroganoff img.jpg" alt="beefbrocolli"><span>Beef Stroganoff</span></span><br><br>
-                        
-
-                        <span><img src="braisedbeef img.jpg" alt="braisedbeef"><span>Braised Beef Short Plate</span></span><br><br>
-                        <span><img src="beefpotroast img.jpg" alt="beefpotroast"><span>Beef Pot Roast</span></span><br><br>
-                        <span><img src="" alt=""><span>Callos (**with Pork)</span></span><br><br>
-                        <span><img src="" alt=""><span>Roast Beef Brisket with Mushroom Gravy</span></span><br><br>
-                        <span><img src="" alt=""><span>Kare Kare</span></span><br><br>
-                        <span><img src="" alt=""><span>Lengua in Mushroom Sauce</span></span><br><br>
-                        <span><img src="" alt=""><span>Beef Fritos with Teriyaki Sauce</span></span><br><br>
-                        <span><img src="" alt=""><span>Mongolian Beef</span></span><br><br>
-                          </div>
-                </div>
+  <div id="maincoursetab" class="tabcontent">
+<!---FOR LG Screen------------------------------------------------------->      
+  <!---FIRST COLUMN-->    
+    <div class="container" id="largemaincourse" style="padding-left: 5vw; padding-right: 5vw;">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>Choose 2 Main Courses (you can select 2 different, or 2 of the same kind)</h5></div>
+      <div class="row">
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>BEEF</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="beef"><br>
+                  <span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span>Beef with Brocolli</span></span><br><br>
+                  <span><img src="beefstroganoff img.jpg" alt="beefsstroganoff"><span>Beef Stroganoff</span></span><br><br>
+                  <span><img src="braisedbeef img.jpg" alt="braisedbeef"><span>Braised Beef Short Plate</span></span><br><br>
+                  <span><img src="beefpotroast img.jpg" alt="beefpotroast"><span>Beef Pot Roast</span></span><br><br>
+                  <span><img src="callos img.jpg" alt="callos"><span>Callos (**with Pork)</span></span><br><br>
+                  <span><img src="roastbeefbrisket img.jpg" alt="roastbeefbrisket"><span style="font-size: 12px;">Roast Beef Brisket with Mushroom Gravy</span></span><br><br>
+                  <span><img src="karekare img.jpg" alt="karekare"><span>Kare Kare</span></span><br><br>
+                  <span><img src="lenguamushroomsauce img.jpg" alt="lengua"><span>Lengua in Mushroom Sauce</span></span><br><br>
+                  <span><img src="beeffritosteriyakisauce img.jpg" alt="beeffritos"><span>Beef Fritos with Teriyaki Sauce</span></span><br><br>
+                  <span><img src="mongolianbeef img.jpg" alt="mongolianbeef"><span>Mongolian Beef</span></span><br><br>
+                </div>    
+              </div>
             </div>
-            
-        
+          </div>
+    <!---SECOND COLUMN-->  
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>CHICKEN</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="chicken"><br>
+                  <span><img src="buffalowings img.jpg" alt="buffalowings"><span>Buffalo Wings Assorted</span></span><br><br>
+                  <span><img src="grilledchickenteriyaki img.png" alt="grilledchickenteriyaki"><span>Grilled Chicken Teriyaki</span></span><br><br>
+                  <span><img src="cheezyafritada img.jpg" alt="cheezyafritada"><span>Cheezy Afritada</span></span><br><br>
+                  <span><img src="chickencurry img.jpg" alt="chickencurry"><span>Chicken Curry</span></span><br><br>
+                  <span><img src="danesfried chicken img.jpg" alt="danesfriedchicken"><span>Dane's Fried Chicken</span></span><br><br>
+                  <span><img src="herbroastchicken img.jpg" alt="herbroastchicken"><span>Herb Roast Chicken</span></span><br><br>
+                  <span><img src="zoey fried chicken.jpg" alt="zoeyfriedchicken"><span>Zoey's Fried Chickeen</span></span><br><br>
+                  <span><img src="honeyglazedchicken img.jpg" alt="honeyglazedchicken"><span>Honey Glazed Chicken</span></span><br><br>
+                  <span><img src="soygarlicchicken img.jpg" alt="soygarlicchicken"><span>Soy Garlic Chicken</span></span><br><br>
+                  <span><img src="creamytuscanchicken img.jpg" alt="creamytuscanchicken"><span>Creamy Tuscan Chicken</span></span><br><br>
+                  <span><img src="breadedchickenteriyaki img.JPG" alt="breadedchickenteriyaki"><span>Breaded Chicken Teriyaki</span></span><br><br>
+                  <span><img src="saucyhotwings img.jpg" alt="saucyhotwings"><span>Saucy Hot Wings</span></span><br><br>
+                </div>    
+              </div>
+            </div>
+          </div>
+    <!---THIRD COLUMN-->
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>SEAFOOD</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="seafood"><br>
+                  <span><img src="sweetsourfishfillet img.jpg" alt="sweetsourfishfillet"><span>Sweet & Sour Fish Fillet</span></span><br><br>
+                  <span><img src="grilledtangigue img.jpg" alt="grilledtangigue"><span style="font-size: 14px;">Grilled Tangigue with Lemon Butter</span></span><br><br>
+                  <span><img src="grilledtunabelly img.jpg" alt="grilledtunabelly"><span>Grilled Tuna Belly</span></span><br><br>
+                  <span><img src="seafoodplatter img.jpg" alt="seafoodplatter"><span>Seafood Platter</span></span><br><br>
+                  <span><img src="spicyseafood img.jpg" alt="spicyseafood"><span>Spicy Seafood</span></span><br><br>
+                  <span><img src="fishfilletwithbrocolli img.JPG" alt="sauteedfishfillet"><span>Sauteed Fish Fillet with Brocolli</span></span><br><br>
+                  <span><img src="breadedfishsteakingravy img.jpg" alt="breadedfishsteakgravy"><span style="font-size: 14px;">Breaded Fish Steak in Gravy Sauce</span></span><br><br>
+                  <span><img src="breadedfishsteakintartar img.jpg" alt="breadedfishsteaktartar"><span style="font-size: 14px;">Breaded Fish Steak in Tartar Sauce</span></span><br><br>
+                </div>    
+              </div>
+            </div>
+          </div>
+      </div>      
     </div>
+<!---FOR MD Screen------------------------------------------------------->      
+  <!---FIRST COLUMN-->    
+  <div class="container" id="mdmaincourse" style="padding-left: 1vw; padding-right: 1vw;">
+    <div class="row" style="padding: 2vh; text-align: center;"><h5>Choose 2 Main Courses (you can select 2 different, or 2 of the same kind)</h5></div>
+    <div class="row">
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>BEEF</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="beef"><br>
+                <span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span id="mdfont">Beef with Brocolli</span></span><br><br>
+                <span><img src="beefstroganoff img.jpg" alt="beefstroganoff"><span id="mdfont">Beef Stroganoff</span></span><br><br>
+                <span><img src="braisedbeef img.jpg" alt="braisedbeef"><span id="mdfont">Braised Beef Short Plate</span></span><br><br>
+                <span><img src="beefpotroast img.jpg" alt="beefpotroast"><span id="mdfont">Beef Pot Roast</span></span><br><br>
+                <span><img src="callos img.jpg" alt="callos"><span id="mdfont">Callos (**with Pork)</span></span><br><br>
+                <span><img src="roastbeefbrisket img.jpg" alt="roastbeefbrisket"><span id="mdfont">Roast Beef Brisket with <span style="font-size: 11px; padding-left: 72px;">Mushroom Gravy</span></span></span><br><br>
+                <span><img src="karekare img.jpg" alt="karekare"><span id="mdfont">Kare Kare</span></span><br><br>
+                <span><img src="lenguamushroomsauce img.jpg" alt="lengua"><span style="font-size: 10px;">Lengua in Mushroom Sauce</span></span></span><br><br>
+                <span><img src="beeffritosteriyakisauce img.jpg" alt="beeffritos"><span style="font-size: 9px;">Beef Fritos with Teriyaki Sauce</span></span></span><br><br>
+                <span><img src="mongolianbeef img.jpg" alt="mongolianbeef"><span id="mdfont">Mongolian Beef</span></span><br><br><br>
+              </div>    
+            </div>
+          </div>
+        </div>
+  <!---SECOND COLUMN-->  
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>CHICKEN</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="chicken"><br>
+                <span><img src="buffalowings img.jpg" alt="buffalowings"><span id="mdfont">Buffalo Wings Assorted</span></span><br><br>
+                <span><img src="grilledchickenteriyaki img.png" alt="grilledchickenteriyaki"><span id="mdfont">Grilled Chicken Teriyaki</span></span><br><br>
+                <span><img src="cheezyafritada img.jpg" alt="cheezyafritada"><span id="mdfont">Cheezy Afritada</span></span><br><br>
+                <span><img src="chickencurry img.jpg" alt="chickencurry"><span id="mdfont">Chicken Curry</span></span><br><br>
+                <span><img src="danesfried chicken img.jpg" alt="danesfriedchicken"><span id="mdfont">Dane's Fried Chicken</span></span><br><br>
+                <span><img src="herbroastchicken img.jpg" alt="herbroastchicken"><span id="mdfont">Herb Roast Chicken</span></span><br><br><br>
+                <span><img src="zoey fried chicken.jpg" alt="zoeyfriedchicken"><span id="mdfont">Zoey's Fried Chickeen</span></span><br><br>
+                <span><img src="honeyglazedchicken img.jpg" alt="honeyglazedchicken"><span id="mdfont">Honey Glazed Chicken</span></span><br><br>
+                <span><img src="soygarlicchicken img.jpg" alt="soygarlicchicken"><span id="mdfont">Soy Garlic Chicken</span></span><br><br>
+                <span><img src="creamytuscanchicken img.jpg" alt="creamytuscanchicken"><span id="mdfont">Creamy Tuscan Chicken</span></span><br><br>
+                <span><img src="breadedchickenteriyaki img.JPG" alt="breadedchickenteriyaki"><span id="mdfont">Breaded Chicken Teriyaki</span></span><br><br>
+                <span><img src="saucyhotwings img.jpg" alt="saucyhotwings"><span id="mdfont">Saucy Hot Wings</span></span><br><br>
+              </div>    
+            </div>
+          </div>
+        </div>
+  <!---THIRD COLUMN-->
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>SEAFOOD</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="seafood"><br>
+                <span><img src="sweetsourfishfillet img.jpg" alt="sweetsourfishfillet"><span id="mdfont">Sweet & Sour Fish Fillet</span></span><br><br>
+                <span><img src="grilledtangigue img.jpg" alt="grilledtangigue"><span style="font-size: 7px;">Grilled Tangigue with Lemon Butter</span></span><br><br>
+                <span><img src="grilledtunabelly img.jpg" alt="grilledtunabelly"><span id="mdfont">Grilled Tuna Belly</span></span><br><br>
+                <span><img src="seafoodplatter img.jpg" alt="seafoodplatter"><span id="mdfont">Seafood Platter</span></span><br><br>
+                <span><img src="spicyseafood img.jpg" alt="spicyseafood"><span id="mdfont">Spicy Seafood</span></span><br><br>
+                <span><img src="fishfilletwithbrocolli img.JPG" alt="sauteedfishfillet"><span style="font-size: 9px;">Sauteed Fish Fillet with Brocolli</span></span><br><br><br>
+                <span><img src="breadedfishsteakingravy img.jpg" alt="breadedfishsteakgravy"><span style="font-size: 8px;">Breaded Fish Steak in Gravy Sauce</span></span><br><br>
+                <span><img src="breadedfishsteakintartar img.jpg" alt="breadedfishsteaktartar"><span style="font-size: 8px;">Breaded Fish Steak in Tartar Sauce</span></span></span><br><br>
+              </div>    
+            </div>
+          </div>
+        </div>
+    </div>      
+  </div>
+<!---FOR SM Screen------------------------------------------------------->      
+  <!---FIRST COLUMN-->    
+  <div class="container" id="smmaincourse" style="padding-left: 2vw; padding-right: 2vw;">
+    <div class="row" style="padding: 2vh; text-align: center;"><h5>Choose 2 Main Courses (you can select 2 different, or 2 of the same kind)</h5></div>
+    <div class="row">
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>BEEF</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="beef"><br>
+                <div class="row" id="maincourserow"><span><img src="beefbrocolli img.jpg" alt="beefbrocolli" id="smimg"><span id="smfont">Beef with Brocolli</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="beefstroganoff img.jpg" alt="beefstroganoff" id="smimg"><span id="smfont">Beef Stroganoff</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="braisedbeef img.jpg" alt="braisedbeef" id="smimg"><span id="smfont">Braised Beef Short Plate</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="beefpotroast img.jpg" alt="beefpotroast" id="smimg"><span id="smfont">Beef Pot Roast</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="callos img.jpg" alt="callos" id="smimg"><span id="smfont">Callos (**with Pork)</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="roastbeefbrisket img.jpg" alt="roastbeefbrisket" id="smimg"><span id="smfont">Roast Beef Brisket with Mushroom Gravy</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="karekare img.jpg" alt="karekare" id="smimg"><span id="smfont">Kare Kare</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="lenguamushroomsauce img.jpg" alt="lengua" id="smimg"><span id="smfont">Lengua in Mushroom Sauce</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="beeffritosteriyakisauce img.jpg" alt="beeffritos" id="smimg"><span id="smfont">Beef Fritos with Teriyaki Sauce</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="mongolianbeef img.jpg" alt="mongolianbeef" id="smimg"><span id="smfont">Mongolian Beef</span></span></div>
+              </div>    
+            </div>
+          </div>
+        </div>
+  <!---SECOND COLUMN-->  
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>CHICKEN</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="chicken"><br>
+                <div class="row" id="maincourserow"><span><img src="buffalowings img.jpg" alt="buffalowings" id="smimg"><span id="smfont">Buffalo Wings Assorted</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="grilledchickenteriyaki img.png" alt="grilledchickenteriyaki" id="smimg"><span id="smfont">Grilled Chicken Teriyaki</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="cheezyafritada img.jpg" alt="cheezyafritada" id="smimg"><span id="smfont">Cheezy Afritada</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="chickencurry img.jpg" alt="chickencurry" id="smimg"><span id="smfont">Chicken Curry</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="danesfried chicken img.jpg" alt="danesfriedchicken" id="smimg"><span id="smfont">Dane's Fried Chicken</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="herbroastchicken img.jpg" alt="herbroastchicken" id="smimg"><span id="smfont">Herb Roast Chicken</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="zoey fried chicken.jpg" alt="zoeyfriedchicken" id="smimg"><span id="smfont">Zoey's Fried Chickeen</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="honeyglazedchicken img.jpg" alt="honeyglazedchicken" id="smimg"><span id="smfont">Honey Glazed Chicken</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="soygarlicchicken img.jpg" alt="soygarlicchicken" id="smimg"><span id="smfont">Soy Garlic Chicken</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="creamytuscanchicken img.jpg" alt="creamytuscanchicken" id="smimg"><span id="smfont">Creamy Tuscan Chicken</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="breadedchickenteriyaki img.JPG" alt="breadedchickenteriyaki" id="smimg"><span id="smfont">Breaded Chicken Teriyaki</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="saucyhotwings img.jpg" alt="saucyhotwings" id="smimg"><span id="smfont" id="smimg">Saucy Hot Wings</span></span></div>
+              </div>    
+            </div>
+          </div>
+        </div>
+  <!---THIRD COLUMN-->
+      <div class="col-4 border">
+        <div class="row" id="maincourseheader"><p>SEAFOOD</p><br>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="seafood"><br>
+                <div class="row" id="maincourserow"><span><img src="sweetsourfishfillet img.jpg" alt="sweetsourfishfillet" id="smimg"><span id="smfont">Sweet & Sour Fish Fillet</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="grilledtangigue img.jpg" alt="grilledtangigue" id="smimg"><span id="smfont">Grilled Tangigue with Lemon Butter</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="grilledtunabelly img.jpg" alt="grilledtunabelly" id="smimg"><span id="smfont">Grilled Tuna Belly</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="seafoodplatter img.jpg" alt="seafoodplatter" id="smimg"><span id="smfont">Seafood Platter</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="spicyseafood img.jpg" alt="spicyseafood" id="smimg"><span id="smfont">Spicy Seafood</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="fishfilletwithbrocolli img.JPG" alt="sauteedfishfillet" id="smimg"><span id="smfont">Sauteed Fish Fillet with Brocolli</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="breadedfishsteakingravy img.jpg" alt="breadedfishsteakgravy" id="smimg"><span id="smfont">Breaded Fish Steak in Gravy Sauce</span></span></div>
+                <div class="row" id="maincourserow"><span><img src="breadedfishsteakintartar img.jpg" alt="breadedfishsteaktartar" id="smimg"><span id="smfont">Breaded Fish Steak in Tartar Sauce</span></span></div>
+              </div>    
+            </div>
+          </div>
+        </div>
+    </div>      
+  </div>    
+
+    <!----2nd Tab-->
+    <div id="pastaorvegetable" class="tabcontent">
+      
     </div>
     
-
-        
+    <div id="salad" class="tabcontent">
+      
+    </div>
     
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div id="dessert" class="tabcontent">
+      
+    </div>
+    
+    <div id="beverage" class="tabcontent">
+      
+    </div>
 
 <!---JS SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -215,6 +391,32 @@ span {
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
           crossorigin="anonymous">
          </script>
+<!---JS SCRIPTS for TOGGLE TABS MENU-->         
+         <script>
+          function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+          
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].style.backgroundColor = "";
+            }
+          
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+          
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+          }
+          
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+          </script>  
 </body>
 </html>
 
